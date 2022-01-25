@@ -25,7 +25,6 @@ public class Produtos {
 	private String nomeProduto;
 	
 	@NotNull
-	@Size()
 	private Double valorProduto;
 	
 	@NotNull
