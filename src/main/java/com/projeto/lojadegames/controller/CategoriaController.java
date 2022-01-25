@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,8 +37,8 @@ public class CategoriaController {
 	}
 	
 	@GetMapping("/nomecategoria/{nomecategoria}")
-	public ResponseEntity<List<Categoria>> GetByNomecategoria (@PathVariable String nomeCategoria) {
-		return ResponseEntity.ok(repository.findAllByNomeCategoriaContainingIgnoreCase(nomeCategoria));
+	public ResponseEntity<List<Categoria>> GetByNomecategoria (@PathVariable String nomecategoria) {
+		return ResponseEntity.ok(repository.findAllByNomeCategoriaContainingIgnoreCase(nomecategoria));
 	}
 	
 	@PostMapping
@@ -52,8 +51,8 @@ public class CategoriaController {
 		return ResponseEntity.status(HttpStatus.OK).body(repository.save(categoria));
 	}
 	
-	@DeleteMapping("/{idcategoria}")
-	public void delete(@PathVariable long idCategoria) {
-		repository.deleteById(idCategoria);
+	@DeleteMapping("/{id}")
+	public void delete(@PathVariable long id) {
+		repository.deleteById(id);
 	}
 }
