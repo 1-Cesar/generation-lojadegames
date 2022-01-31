@@ -18,6 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.projeto.lojadegames.model.Categoria;
 import com.projeto.lojadegames.repository.CategoriaRepository;
 
+/*
+ * @author César Augusto
+ * @author Edgar Soares Marinho
+ * @version 0.0.1
+ * @since 0.0.1
+ */
+
 @RestController
 @RequestMapping ("/categoria")
 @CrossOrigin("*")
@@ -32,8 +39,8 @@ public class CategoriaController {
 	}
 	
 	@GetMapping("/{idcategoria}")
-	public ResponseEntity<Categoria> GetById(@PathVariable long idCategoria) {
-		return repository.findById(idCategoria).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
+	public ResponseEntity<Categoria> GetById(@PathVariable long idcategoria) {
+		return repository.findById(idcategoria).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
 	}
 	
 	@GetMapping("/nomecategoria/{nomecategoria}")
@@ -55,4 +62,5 @@ public class CategoriaController {
 	public void delete(@PathVariable long id) {
 		repository.deleteById(id);
 	}
+	
 }

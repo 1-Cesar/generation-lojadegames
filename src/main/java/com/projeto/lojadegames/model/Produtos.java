@@ -11,6 +11,13 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/*
+ * @author Pedro Lucas
+ * @author Edgar Soares Marinho
+ * @version 0.0.1
+ * @since 0.0.1
+ */
+
 @Entity
 @Table (name = "tb_produtos")
 
@@ -84,6 +91,5 @@ public class Produtos {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
-	
 	
 }

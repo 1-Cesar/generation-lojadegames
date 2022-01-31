@@ -14,6 +14,14 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/*
+ * @author César Augusto
+ * @author Edgar Soares Marinho
+ * @author Pedro Lucas
+ * @version 0.0.1
+ * @since 0.0.1
+ */
+
 @Entity
 @Table (name = "tb_categoria")
 public class Categoria {
