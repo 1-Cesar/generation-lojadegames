@@ -18,6 +18,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.projeto.lojadegames.model.Produtos;
 import com.projeto.lojadegames.repository.ProdutosRepository;
 
+/*
+ * @author Edgar Soares Marinho
+ * @version 0.0.1
+ * @since 0.0.1
+ */
+
 @RestController
 @RequestMapping("/produtos")
 @CrossOrigin("*")
@@ -57,4 +63,5 @@ public class ProdutosController {
 	public void delete(@PathVariable long id) {
 		repository.deleteById(id);
 	}
+	
 }
